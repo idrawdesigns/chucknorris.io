@@ -19,6 +19,7 @@ import DisplayJokes from '../display-jokes/DisplayJokes'
 class Landing extends Component {
   componentDidMount() {
     this.props.fetchCategories()
+    this.props.getJoke('animal')
   }
   render() {
     const { categories, loading, previous, joke, getJoke } = this.props

@@ -1,24 +1,26 @@
 import React from 'react'
 
 import { Typography } from 'antd'
-import { LeftOutlined, RightOutlined } from '@ant-design/icons'
 
-import { DisplayContainer, Btn } from './display-jokes.styles'
+import { DisplayContainer } from './display-jokes.styles'
 
-const { Text } = Typography
+const { Title } = Typography
+
 const DisplayJokes = ({ previous, joke }) => {
-  console.log('joke ', joke)
+  console.log('previous ', previous)
   return (
     <DisplayContainer>
-      <Btn shape="circle" icon={<LeftOutlined />} size="small" />
+      {/* <Btn shape="circle" icon={<LeftOutlined />} size="small" />
       <Btn
         // type="primary"
         shape="circle"
         icon={<RightOutlined />}
         size="small"
       />
-      <br />
-      <Text type="secondary">{joke}</Text>
+      <br /> */}
+      <Title level={3} type="primary">
+        {joke}
+      </Title>
     </DisplayContainer>
   )
 }
