@@ -3,7 +3,7 @@ import { List, Skeleton } from 'antd'
 
 import { CategoryStyle } from './categories.styles'
 
-const Categories = ({ categories, loading, previous, getJoke }) => {
+const Categories = ({ categories, loading, getJoke }) => {
   return (
     <CategoryStyle
       size="small"
@@ -12,7 +12,9 @@ const Categories = ({ categories, loading, previous, getJoke }) => {
       bordered
       dataSource={categories}
       renderItem={(item) => (
-        <List.Item onClick={() => getJoke(item)}>{item}</List.Item>
+        <List.Item className="givehover" onClick={() => getJoke(item)}>
+          {item}
+        </List.Item>
       )}
     />
   )
